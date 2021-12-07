@@ -3,3 +3,11 @@ on: pull_request_review
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+    steps:
+    - name: Automatic approval
+      uses: pullreminders/label-when-approved-action
+      env:
+      - APPROVALS: "1"
+      - GITHUB_TOKEN: "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"
+      - ADD_LABEL: "NICE_AND_STEADY"
+   
